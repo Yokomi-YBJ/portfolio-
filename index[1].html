@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beyea Yokomi</title>
+    <style>
+         :root {
+            --primary-color: #a855f7;
+            --gradient: linear-gradient(135deg, #a855f7, #6b21a8);
+            --bg-color: #0e0e0e;
+            --text-color: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', sans-serif;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        body.loaded {
+            opacity: 1;
+        }
+        
+        header {
+            background: var(--gradient);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 0 20px var(--primary-color);
+        }
+        
+        header h1 {
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        nav a:hover {
+            color: #aaa;
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+        
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 10px;
+        }
+        
+        #about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .profile-pic {
+            flex: 1 1 250px;
+            min-width: 200px;
+            max-width: 300px;
+            height: 300px;
+            background: #1e1e1e;
+            border-radius: 20px;
+            box-shadow: 0 0 20px var(--primary-color);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .bio {
+            flex: 2;
+        }
+        
+        .gras {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .skills-list,
+        .projects-list,
+        .contact-info {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skills-list li,
+        .contact-info li {
+            background: #1f1f1f;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 0 10px #a855f770;
+        }
+        
+        .contact-info li a {
+            color: white;
+        }
+        
+        .project {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 0 10px #6b21a860;
+            transition: transform 0.3s;
+        }
+        
+        .project:hover {
+            transform: scale(1.03);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #111;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            #about {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Beyea Yokomi</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="profile-pic" style="background-image: url('moi.jpg');"></div>
+        <div class="bio">
+            <h2>À propos de moi</h2>
+            <p style="text-align: justify;"><br>Je m'appelle <strong>Yokomi Beyea Josaphat</strong>,<br><br> <span class="gras">Développeur back-end junior</span> et étudiant en génie logiciel à l'IUT de Ngaoundéré. Je suis passionné par le <span class="gras">développement web</span>,
+                notamment avec PHP, Laravel et le Javascript, et je m’initie au <span class="gras">développement mobile</span> pour compléter mes compétences.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Compétences</h2>
+        <ul class="skills-list">
+            <li>PHP 8.2</li>
+            <li>Laravel 11</li>
+            <li>JavaScript (débutant)</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projets en cours</h2>
+        <div class="projects-list">
+            <div class="project">
+                <h3>Tic-Tac-Toe Multijoueur</h3>
+                <p>Un jeu en ligne avec tournoi à 4 joueurs. PHP, JS & système de classement.</p>
+            </div>
+            <div class="project">
+                <h3>easy-G</h3>
+                <p>Un gestionnaire de tâches moderne avec espace collaboratif pour les jeunes entreprises.</p>
+            </div>
+            <div class="project">
+                <h3>Cycy-Food</h3>
+                <p>Un site e-commerce pour un restaurant, développé en équipe.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-info">
+            <li>Email : <a href="mailto:beyeayokomi@gmail.com">beyeayokomi@gmail.com</a></li>
+            <li>Téléphone : <a href="tel:+237691094048">+237 691 09 40 48</a></li>
+            <li>Facebook : <a href="https://facebook.com/beyea.yokomi" target="_blank">Beyea Yokomi</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        © 2025 Beyea Yokomi. Tous droits réservés.
+    </footer>
+
+    <script>
+        // Apparition au chargement
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Animation au scroll
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>
