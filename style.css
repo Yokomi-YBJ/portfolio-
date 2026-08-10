@@ -355,7 +355,7 @@ section{position:relative;z-index:3;padding:7rem 0;}
   padding:2rem;
 }
 .project-media img{
-  max-height:100%;width:auto;max-width:100%;border-radius:14px;
+  max-height:100%;width:auto;max-width:100%;border-radius:10px;
   box-shadow:0 20px 50px -15px rgba(0,0,0,0.55);
   transition:transform .5s var(--ease);
 }
